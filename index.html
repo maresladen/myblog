@@ -69,8 +69,8 @@
   
     <article id="post-云音乐" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/myblog/2017/07/23/云音乐/" class="article-date">
-  <time datetime="2017-07-23T14:49:39.321Z" itemprop="datePublished">2017-07-23</time>
+    <a href="/myblog/2017/08/17/云音乐/" class="article-date">
+  <time datetime="2017-08-17T09:56:57.638Z" itemprop="datePublished">2017-08-17</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/myblog/2017/07/23/云音乐/">云音乐</a>
+      <a class="article-title" href="/myblog/2017/08/17/云音乐/">云音乐</a>
     </h1>
   
 
@@ -101,7 +101,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://maresladen.github.io/myblog/2017/07/23/云音乐/" data-id="cj5gubjwn00005omj4s4joi8f" class="article-share-link">Share</a>
+      <a data-url="https://maresladen.github.io/myblog/2017/08/17/云音乐/" data-id="cj6g9vjmj0000ecmjouyiw8nj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myblog/tags/朝花/">朝花</a></li></ul>
@@ -113,10 +113,10 @@
 
 
   
-    <article id="post-博客搭建指南" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-批处理指南" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/myblog/2017/07/23/博客搭建指南/" class="article-date">
-  <time datetime="2017-07-23T14:49:39.321Z" itemprop="datePublished">2017-07-23</time>
+    <a href="/myblog/2017/08/17/批处理指南/" class="article-date">
+  <time datetime="2017-08-17T09:56:57.638Z" itemprop="datePublished">2017-08-17</time>
 </a>
     
   </div>
@@ -127,7 +127,63 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/myblog/2017/07/23/博客搭建指南/">博客搭建指南</a>
+      <a class="article-title" href="/myblog/2017/08/17/批处理指南/">批处理指南</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="读取命令输出并判断字符串"><a href="#读取命令输出并判断字符串" class="headerlink" title="读取命令输出并判断字符串"></a>读取命令输出并判断字符串</h3><hr>
+<p>判断变量是否存在值</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">for</span> /f <span class="string">"delims="</span> %%i <span class="keyword">in</span> (<span class="string">'node -v'</span>) <span class="keyword">do</span> <span class="built_in">set</span> str=%%i</div><div class="line"></div><div class="line"><span class="keyword">if</span> <span class="string">"%str%"</span> == <span class="string">""</span> (</div><div class="line">    <span class="built_in">echo</span> 未安装nodejs</div><div class="line">    goto insNode</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> 已安装nodejs</div><div class="line">    <span class="built_in">echo</span> 检查nodejs版本</div><div class="line">)</div></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="keyword">for</span> /f <span class="string">"delims="</span> %%i <span class="keyword">in</span> (<span class="string">'node -v'</span>) <span class="keyword">do</span> <span class="built_in">set</span> str=%%i</div><div class="line"></div><div class="line"><span class="built_in">echo</span> %str%|find <span class="string">"^v6.9"</span>&gt; nul</div><div class="line"><span class="keyword">if</span> %errorlevel% equ 0 (</div><div class="line">    <span class="built_in">echo</span> 请卸载现有nodejs程序，并重新运行本批处理命令</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> 匹配到6.9版本</div><div class="line">    <span class="built_in">echo</span> 跳过nodejs安装</div><div class="line">)</div></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">rem 删除文件夹</div><div class="line"></div><div class="line">rd /q /s foldr</div><div class="line">del file</div><div class="line"></div><div class="line"></div><div class="line">rem 自己调用自身</div><div class="line"><span class="built_in">set</span> /p input=请输入A或者B:</div><div class="line"><span class="keyword">if</span> <span class="string">"%input%"</span> == <span class="string">"A"</span> (</div><div class="line">    call this.bat</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> your <span class="built_in">type</span> B</div><div class="line">)</div><div class="line">pause</div></pre></td></tr></table></figure>
+<p>配置方法判断<br>判断是否安装node，如果没有安装，则安装<br>如果已经安装，判断版本，如果低于6.9的版本，要求自行删除，然后重新运行bat<br>判断是否已经安装yo和rainbowUIcli，如果有，则跳过</p>
+<ol>
+<li>安装nodejs</li>
+<li>注册node私有仓库</li>
+<li>全局安装yo脚手架</li>
+<li>全局安装rainbowUIcli</li>
+<li>新建RainbowUI文件夹</li>
+<li>进入RainbowUI文件夹</li>
+<li>搭建rainbowUI程序</li>
+<li>执行npn run dev</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://maresladen.github.io/myblog/2017/08/17/批处理指南/" data-id="cj6g9vjmj0001ecmj0rgi3v4h" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myblog/tags/work/">work</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-博客搭建指南" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/myblog/2017/08/17/博客搭建指南/" class="article-date">
+  <time datetime="2017-08-17T09:56:57.638Z" itemprop="datePublished">2017-08-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/myblog/2017/08/17/博客搭建指南/">博客搭建指南</a>
     </h1>
   
 
@@ -179,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://maresladen.github.io/myblog/2017/07/23/博客搭建指南/" data-id="cj5gubjx200015omjid0u7osr" class="article-share-link">Share</a>
+      <a data-url="https://maresladen.github.io/myblog/2017/08/17/博客搭建指南/" data-id="cj6g9vjmz0003ecmjr1en3ez6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myblog/tags/生活/">生活</a></li></ul>
@@ -248,7 +304,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/myblog/tags/朝花/">朝花</a></li><li class="tag-list-item"><a class="tag-list-link" href="/myblog/tags/生活/">生活</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/myblog/tags/work/">work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/myblog/tags/朝花/">朝花</a></li><li class="tag-list-item"><a class="tag-list-link" href="/myblog/tags/生活/">生活</a></li></ul>
     </div>
   </div>
 
@@ -258,7 +314,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/myblog/tags/朝花/" style="font-size: 10px;">朝花</a> <a href="/myblog/tags/生活/" style="font-size: 10px;">生活</a>
+      <a href="/myblog/tags/work/" style="font-size: 10px;">work</a> <a href="/myblog/tags/朝花/" style="font-size: 10px;">朝花</a> <a href="/myblog/tags/生活/" style="font-size: 10px;">生活</a>
     </div>
   </div>
 
@@ -267,7 +323,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/myblog/archives/2017/07/">July 2017</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/myblog/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/myblog/archives/2017/07/">July 2017</a></li></ul>
     </div>
   </div>
 
@@ -280,11 +336,15 @@
       <ul>
         
           <li>
-            <a href="/myblog/2017/07/23/云音乐/">云音乐</a>
+            <a href="/myblog/2017/08/17/云音乐/">云音乐</a>
           </li>
         
           <li>
-            <a href="/myblog/2017/07/23/博客搭建指南/">博客搭建指南</a>
+            <a href="/myblog/2017/08/17/批处理指南/">批处理指南</a>
+          </li>
+        
+          <li>
+            <a href="/myblog/2017/08/17/博客搭建指南/">博客搭建指南</a>
           </li>
         
           <li>
