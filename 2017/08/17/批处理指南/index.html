@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://maresladen.github.io/myblog/2017/08/17/批处理指南/index.html">
 <meta property="og:site_name" content="BetaFun">
 <meta property="og:description" content="读取命令输出并判断字符串 判断变量是否存在值 12345678910for /f &quot;delims=&quot; %%i in (&apos;node -v&apos;) do set str=%%iif &quot;%str%&quot; == &quot;&quot; (    echo 未安装nodejs    goto insNode) else (    echo 已安装nodejs    echo 检查nodejs版本)  12345678910@echo">
-<meta property="og:updated_time" content="2017-08-17T09:56:57.810Z">
+<meta property="og:updated_time" content="2017-08-17T09:59:34.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="批处理指南">
 <meta name="twitter:description" content="读取命令输出并判断字符串 判断变量是否存在值 12345678910for /f &quot;delims=&quot; %%i in (&apos;node -v&apos;) do set str=%%iif &quot;%str%&quot; == &quot;&quot; (    echo 未安装nodejs    goto insNode) else (    echo 已安装nodejs    echo 检查nodejs版本)  12345678910@echo">
@@ -70,7 +70,7 @@
         <section id="main"><article id="post-批处理指南" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/myblog/2017/08/17/批处理指南/" class="article-date">
-  <time datetime="2017-08-17T09:56:57.638Z" itemprop="datePublished">2017-08-17</time>
+  <time datetime="2017-08-17T09:59:34.797Z" itemprop="datePublished">2017-08-17</time>
 </a>
     
   </div>
@@ -93,7 +93,7 @@
 <p>判断变量是否存在值</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">for</span> /f <span class="string">"delims="</span> %%i <span class="keyword">in</span> (<span class="string">'node -v'</span>) <span class="keyword">do</span> <span class="built_in">set</span> str=%%i</div><div class="line"></div><div class="line"><span class="keyword">if</span> <span class="string">"%str%"</span> == <span class="string">""</span> (</div><div class="line">    <span class="built_in">echo</span> 未安装nodejs</div><div class="line">    goto insNode</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> 已安装nodejs</div><div class="line">    <span class="built_in">echo</span> 检查nodejs版本</div><div class="line">)</div></pre></td></tr></table></figure>
 <hr>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="keyword">for</span> /f <span class="string">"delims="</span> %%i <span class="keyword">in</span> (<span class="string">'node -v'</span>) <span class="keyword">do</span> <span class="built_in">set</span> str=%%i</div><div class="line"></div><div class="line"><span class="built_in">echo</span> %str%|find <span class="string">"^v6.9"</span>&gt; nul</div><div class="line"><span class="keyword">if</span> %errorlevel% equ 0 (</div><div class="line">    <span class="built_in">echo</span> 请卸载现有nodejs程序，并重新运行本批处理命令</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> 匹配到6.9版本</div><div class="line">    <span class="built_in">echo</span> 跳过nodejs安装</div><div class="line">)</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="keyword">for</span> /f <span class="string">"delims="</span> %%i <span class="keyword">in</span> (<span class="string">'node -v'</span>) <span class="keyword">do</span> <span class="built_in">set</span> str=%%i</div><div class="line"><span class="built_in">echo</span> <span class="built_in">test</span></div><div class="line"><span class="built_in">echo</span> %str%|find <span class="string">"^v6.9"</span>&gt; nul</div><div class="line"><span class="keyword">if</span> %errorlevel% equ 0 (</div><div class="line">    <span class="built_in">echo</span> 请卸载现有nodejs程序，并重新运行本批处理命令</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> 匹配到6.9版本</div><div class="line">    <span class="built_in">echo</span> 跳过nodejs安装</div><div class="line">)</div></pre></td></tr></table></figure>
 <hr>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">rem 删除文件夹</div><div class="line"></div><div class="line">rd /q /s foldr</div><div class="line">del file</div><div class="line"></div><div class="line"></div><div class="line">rem 自己调用自身</div><div class="line"><span class="built_in">set</span> /p input=请输入A或者B:</div><div class="line"><span class="keyword">if</span> <span class="string">"%input%"</span> == <span class="string">"A"</span> (</div><div class="line">    call this.bat</div><div class="line">) <span class="keyword">else</span> (</div><div class="line">    <span class="built_in">echo</span> your <span class="built_in">type</span> B</div><div class="line">)</div><div class="line">pause</div></pre></td></tr></table></figure>
 <p>配置方法判断<br>判断是否安装node，如果没有安装，则安装<br>如果已经安装，判断版本，如果低于6.9的版本，要求自行删除，然后重新运行bat<br>判断是否已经安装yo和rainbowUIcli，如果有，则跳过</p>
@@ -111,7 +111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://maresladen.github.io/myblog/2017/08/17/批处理指南/" data-id="cj6g9vjmj0001ecmj0rgi3v4h" class="article-share-link">Share</a>
+      <a data-url="https://maresladen.github.io/myblog/2017/08/17/批处理指南/" data-id="cj6g9ywcv0001b8mjm6kclrx0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/myblog/tags/work/">work</a></li></ul>
@@ -122,19 +122,19 @@
     
 <nav id="article-nav">
   
-    <a href="/myblog/2017/08/17/云音乐/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/myblog/2017/08/17/博客搭建指南/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          云音乐
+          博客搭建指南
         
       </div>
     </a>
   
   
-    <a href="/myblog/2017/08/17/博客搭建指南/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/myblog/2017/08/17/云音乐/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">博客搭建指南</div>
+      <div class="article-nav-title">云音乐</div>
     </a>
   
 </nav>
@@ -185,7 +185,7 @@
       <ul>
         
           <li>
-            <a href="/myblog/2017/08/17/云音乐/">云音乐</a>
+            <a href="/myblog/2017/08/17/博客搭建指南/">博客搭建指南</a>
           </li>
         
           <li>
@@ -193,7 +193,7 @@
           </li>
         
           <li>
-            <a href="/myblog/2017/08/17/博客搭建指南/">博客搭建指南</a>
+            <a href="/myblog/2017/08/17/云音乐/">云音乐</a>
           </li>
         
           <li>
