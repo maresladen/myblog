@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>博客搭建指南 | BetaFun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="MinHow,MinHow's Blog" />
+  
+  <meta name="description" content="写在最前想要有一个自己的博客已经很久了，但是一直没有动手去尝试着搭建一个，这次终于迈开了第一步，简单且坑少，不需要自己的服务器，所有的成本都由免费的服务来承载。  github的pages功能使得静态网页博客变得很容易部署，所以我们需要一个github帐号。如果想要使用AppVeyor自动化部署，不要用码云，不要用coding，这不是信仰，而是github会省下很多时间，没有必要去踩这个坑，这都是">
+<meta name="keywords" content="生活">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搭建指南">
+<meta property="og:url" content="https://maresladen.github.io/myblog/2017/08/31/博客搭建指南/index.html">
+<meta property="og:site_name" content="BetaFun">
+<meta property="og:description" content="写在最前想要有一个自己的博客已经很久了，但是一直没有动手去尝试着搭建一个，这次终于迈开了第一步，简单且坑少，不需要自己的服务器，所有的成本都由免费的服务来承载。  github的pages功能使得静态网页博客变得很容易部署，所以我们需要一个github帐号。如果想要使用AppVeyor自动化部署，不要用码云，不要用coding，这不是信仰，而是github会省下很多时间，没有必要去踩这个坑，这都是">
+<meta property="og:image" content="http://or8fufrdd.bkt.clouddn.com/20170710000144_6oegmb_Screenshot.jpeg">
+<meta property="og:image" content="http://or8fufrdd.bkt.clouddn.com/20170710003137_Rvn72O_Screenshot.jpeg">
+<meta property="og:updated_time" content="2017-08-31T15:48:14.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客搭建指南">
+<meta name="twitter:description" content="写在最前想要有一个自己的博客已经很久了，但是一直没有动手去尝试着搭建一个，这次终于迈开了第一步，简单且坑少，不需要自己的服务器，所有的成本都由免费的服务来承载。  github的pages功能使得静态网页博客变得很容易部署，所以我们需要一个github帐号。如果想要使用AppVeyor自动化部署，不要用码云，不要用coding，这不是信仰，而是github会省下很多时间，没有必要去踩这个坑，这都是">
+<meta name="twitter:image" content="http://or8fufrdd.bkt.clouddn.com/20170710000144_6oegmb_Screenshot.jpeg">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/myblog/css/style.css">
+  <script src="/myblog/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/myblog/" class="left">
+                    <span class="site-title">MinHow&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/myblog/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/myblog/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/myblog/">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/myblog/">
+                    <img src="/myblog/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        MinHow&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-博客搭建指南" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      博客搭建指南
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2017-08-31
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h2 id="写在最前"><a href="#写在最前" class="headerlink" title="写在最前"></a>写在最前</h2><p>想要有一个自己的博客已经很久了，但是一直没有动手去尝试着搭建一个，这次终于迈开了第一步，简单且坑少，不需要自己的服务器，所有的成本都由免费的服务来承载。</p>
+<ul>
+<li>github的pages功能使得静态网页博客变得很容易部署，所以我们需要一个github帐号。如果想要使用AppVeyor自动化部署，不要用码云，不要用coding，这不是信仰，而是github会省下很多时间，没有必要去踩这个坑，这都是我的血和泪总结下来的经验。如果愿意手动部署，则都可以炫。</li>
+<li>使用Hexo框架，Hexo 是一个简单地、轻量地、基于Node的一个静态博客框架，可以方便的生成静态网页托管在github和Heroku上。</li>
+<li>如果需要自动化发布，我们还需要一个AppVeyor帐号，这是一个可选项，每次发布文章自己部署也是没问题的，因为Hexo的插件已经支持一键发布，我使用AppVeyor是为了和我的markdown编辑器集成，不需要自己敲命令进行发布。</li>
+<li>本地软件环境<ul>
+<li>安装npm<ul>
+<li><a href="http://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-npm.html</a></li>
+</ul>
+</li>
+<li>安装git<ul>
+<li><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git</a></li>
+</ul>
+</li>
+<li>安装Hexo<ul>
+<li><code>npm install hexo-cli -g</code></li>
+<li>如果键入hexo有下图的效果，就是安装成功了<br><img src="http://or8fufrdd.bkt.clouddn.com/20170710000144_6oegmb_Screenshot.jpeg" alt="示例"></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h2><ol>
+<li>在github上建立一个项目，clone到本地，比如我们可以建立一个叫做myblog的文件夹，clone到此文件夹下</li>
+<li>使用shell命令进入myblog</li>
+<li>键入<code>hexo init</code>命令</li>
+<li>键入<code>npm install</code>命令</li>
+<li>键入<code>hexo generate</code>命令</li>
+<li>这个时候你就可以在shell中键入<code>hexo server</code>运行自己的服务了</li>
+<li>在第六步通过了之后，键入一键部署命令<code>npm install hexo-deployer-git --save</code></li>
+<li>配置myblog文件夹下的<em>_config.yml</em>文件，修改<em>deploy</em>的内容项目，这里的发布的项目可以是刚才建立的那个，建立不同的分支，当然也可以是一个新的项目，这个由自己来选择。<br><img src="http://or8fufrdd.bkt.clouddn.com/20170710003137_Rvn72O_Screenshot.jpeg" alt=""></li>
+<li>键入<code>hexo deploy</code>命令，hexo就会将markdwon文件生成为html文件，放在public文件夹中，然后部署到github的项目中去</li>
+<li>在github的项目的setting中，找到<code>GitHub Pages</code>，启用pages就可以了</li>
+</ol>
+<p>至此，博客就算是搭建完了，如果要发布内容，只需要写好markdown文件，放入source文件夹下的_posts文件夹下，然后在shell中进入myblog目录，键入<code>hexo deploy</code>，博客就会发布到github上了。</p>
+<hr>
+<h3 id="自动化部署-这是一片新的世界"><a href="#自动化部署-这是一片新的世界" class="headerlink" title="自动化部署 这是一片新的世界"></a>自动化部署 这是一片新的世界</h3><p>参考这篇<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/" target="_blank" rel="external">文章</a>吧，写的很详细，连脚本都帮你写好了</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><h3 id="关于markdown编辑器"><a href="#关于markdown编辑器" class="headerlink" title="关于markdown编辑器"></a>关于markdown编辑器</h3><p>我用的是小书匠，这个软件的名字比较俗，但以我的使用情况，这个软件功能和平台兼容拥有足够的亮点让人愿意去尝试，例如VIM、MERMAID、和不少的第三方数据的绑定功能等
+　</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2017年08月31日 15:48</p>
+        <p>原始链接： <a class="post-url" href="/myblog/2017/08/31/博客搭建指南/" title="博客搭建指南">https://maresladen.github.io/myblog/2017/08/31/博客搭建指南/</a></p>
+        <footer>
+            <a href="https://maresladen.github.io/myblog">
+                <img src="/myblog/images/logo.png" alt="BetaFun">
+                BetaFun
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/myblog/tags/生活/" class="color3">生活</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#写在最前"><span class="post-toc-text">写在最前</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建过程"><span class="post-toc-text">搭建过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动化部署-这是一片新的世界"><span class="post-toc-text">自动化部署 这是一片新的世界</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#写在最后"><span class="post-toc-text">写在最后</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于markdown编辑器"><span class="post-toc-text">关于markdown编辑器</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/myblog/2017/08/31/云音乐/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          云音乐
+        
+      </span>
+    </a>
+  
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2017 BetaFun<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://maresladen.github.io/myblog",
+      animate: true,
+      isHome: false
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/myblog/tags/朝花/" style="font-size: 10px;">朝花</a> <a href="/myblog/tags/生活/" style="font-size: 10px;">生活</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/myblog/js/search.js"></script>
+
+<script src="/myblog/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/myblog/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/myblog/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
