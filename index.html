@@ -263,6 +263,154 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://maresladen.github.io/myblog/2017/09/11/Appveyor构建指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BetaFun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myblog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BetaFun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/myblog/2017/09/11/Appveyor构建指南/" itemprop="url">Appveyor构建指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-11T00:00:00+00:00">
+                2017-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="\myblog\assets\js\APlayer.min.js"> </script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上篇 <a href="https://maresladen.github.io/myblog/2017/09/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/">博客搭建指南</a> 讲述了如果通过Hexo搭建博客，在文章最后给出了大神的blog链接，用于自动化构建主题和html。由于参考大神的文章需要不少自行操作，现在这篇文章是更简化的操作<del>展示Ctrl+V的力量</del>。</p>
+<h2 id="为什么要自动构建"><a href="#为什么要自动构建" class="headerlink" title="为什么要自动构建"></a>为什么要自动构建</h2><ol>
+<li>只关注markdown的编写</li>
+<li>好一点markdown编辑器，基本都有绑定Github的功能，保存markdown到Github，实现自动发布博客</li>
+</ol>
+<h2 id="Appveyor是什么"><a href="#Appveyor是什么" class="headerlink" title="Appveyor是什么"></a>Appveyor是什么</h2><p>Appveyor是一个CI Service，后面我就不详细解释了。请原凉我的懒惰，不了解这个你也不会看到这里了。</p>
+<h2 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h2><ul>
+<li>在<a href="https://github.com/" target="_blank" rel="external">Github</a>建立博客仓库，这个仓库就是通过Hexo搭建的博客的内容</li>
+<li>在Appveyor<a href="https://ci.appveyor.com/signup" target="_blank" rel="external">注册</a></li>
+<li>将Github<a href="https://ci.appveyor.com/projects/new" target="_blank" rel="external">绑定</a>到Appveyor上，这步操作，将建立一个Project<ul>
+<li>在Project的setting选项中的General中，找到<code>Webhook URL</code>项目，记录下这个钩子的路径，待会儿需要在github的设置中需要使用</li>
+<li>在Project的setting选项中的Environment上设置下图的四个变量(<code>GIT_USER_EMAIL</code>，<code>GIT_USER_NAME</code>，<code>STATIC_SITE_REPO</code>，<code>TARGET_BRANCH</code>)，这四个变量的意思如果不懂可以用翻译软件，照抄(如果修改则要修改后续我这里提供的yml的编码)，需要详细说明的是<code>STATIC_SITE_REPO</code>这个值是用于做博客的仓库，也可以是源码的那个仓库，只需要把BRANCH区分开就可以了。</li>
+</ul>
+</li>
+</ul>
+<p><img src="http://or8fufrdd.bkt.clouddn.com/20170911230240_l4XndR_Screenshot.jpeg" alt="环境设置"></p>
+<ul>
+<li>在Github的源码仓库配置CI钩子，即上方记录下的钩子，具体目录在Setting - Webhooks 中拷贝进去即可</li>
+<li><p>请下载这个<a href="http://or8fufrdd.bkt.clouddn.com/appveyor.yml" target="_blank" rel="external">配置文件</a>，打开并修改其中的<code>secure</code>配置项，这里的值是你Github的token，需要在<a href="https://github.com/settings/tokens" target="_blank" rel="external">这里</a>生成，这份文件生成完毕之后，拷贝到自己的Hexo项目根目录中，就是和_config.yml同级的目录</p>
+</li>
+<li><p>通过命令行或者SourceTree或者其他Git工具push你的源文件代码，这时你就可以登录Appveyor看到构建过程，当然你也可以自行增加Hexo插件，修改Appveyor.yml的代码自行增减NPM包</p>
+</li>
+</ul>
+<h2 id="给我一首歌的时间"><a href="#给我一首歌的时间" class="headerlink" title="给我一首歌的时间"></a>给我一首歌的时间</h2><div class="aplayer" data-id="185821" data-server="netease" data-type="song"></div>
+
+<p>++代码是这样的++<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"aplayer"</span> data-id=<span class="string">"185821"</span> data-server=<span class="string">"netease"</span> data-type=<span class="string">"song"</span>&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>这是我加的一个音乐的插件，出于尊敬给出源博客的<a href="https://www.tiexo.cn/aplayer/" target="_blank" rel="external">地址</a>，下载<a href="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js" target="_blank" rel="external">Aplay.js</a>和<a href="https://api.i-meto.com/music/player.js" target="_blank" rel="external">Player.js</a>，放的具体位置和用的主题有关，像我的NexT主题是放在layout的<code>_script</code>下的<code>vendor.swig</code>的最后，形式如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/myblog/js/src/APlayer.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/myblog/js/src/player.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>具体情况各有不同，这个就要靠自己了</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>再推一波<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a>，虽然因为更新4.0，他把我所有的草稿全冲没了…但是好东西仍然值得推广。好用的markdown编辑器很多，我用下来这个是功能最齐全的。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://maresladen.github.io/myblog/2017/09/01/博客搭建指南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -583,7 +731,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/myblog/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -596,7 +744,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/myblog/tags/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
