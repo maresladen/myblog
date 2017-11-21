@@ -263,6 +263,128 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://maresladen.github.io/myblog/2017/11/21/装B指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="BetaFun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/myblog/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="BetaFun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/myblog/2017/11/21/装B指南/" itemprop="url">装B指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T00:00:00+00:00">
+                2017-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <script src="\myblog\assets\js\APlayer.min.js"> </script><p>今天终于有<code>dalao</code>看到我<code>iTerm</code>的<code>FBI WARNING</code>的抬头了</p>
+<p>像我这种明骚不装暗B的人,一定要贴上配置共享一下</p>
+<p>用<code>zsh</code>的编辑<code>.zshrc</code>文件,用<code>bash</code>编辑<code>.bash_profile</code>文件,然后执行一下<code>source .zshrc</code>或<code>source .bash_profile</code>即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#----------------------FBI WARINING ----------------------</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">" FBI Warining "</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">" "</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span>\033[41;37;5m FBI WARNING \033[0m"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">" "</span></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"Ferderal Law provides severe civil and criminal penalties for"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"the unauthorized reproduction, distribution, or exhibition of"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"copyrighted motion pictures (Title 17, United States Code,"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"Sections 501 and 508). The Federal Bureau of Investigation"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"investigates allegations of criminal copyright infringement"</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"></span><br><span class="line">_COLUMNS=$(tput cols)</span><br><span class="line">_MESSAGE=<span class="string">"(Title 17, United States Code, Section 506)."</span></span><br><span class="line">y=$(( ( <span class="variable">$_COLUMNS</span> - <span class="variable">$&#123;#_MESSAGE&#125;</span> )  / 2 ))</span><br><span class="line">spaces=$(<span class="built_in">printf</span> <span class="string">"%-<span class="variable">$&#123;y&#125;</span>s"</span> <span class="string">" "</span>)</span><br><span class="line"><span class="built_in">echo</span> -e <span class="string">"<span class="variable">$&#123;spaces&#125;</span><span class="variable">$&#123;_MESSAGE&#125;</span>"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">" "</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#----------------------FBI WARINING ----------------------</span></span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://maresladen.github.io/myblog/2017/10/13/从Internet说起/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -460,7 +582,7 @@
 <div class="aplayer" data-id="492722" data-server="netease" data-type="song"></div>
 
 <h2 id="配置篇"><a href="#配置篇" class="headerlink" title="配置篇"></a>配置篇</h2><h3 id="vsCode配置记录"><a href="#vsCode配置记录" class="headerlink" title="vsCode配置记录"></a>vsCode配置记录</h3><p>半阙临江仙<br>滚滚长江东逝水，浪花淘尽编辑器<br>各种配置转头空。<br>青山依旧在，几度夕阳红。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div></pre></td><td class="code"><pre><div class="line">// 将设置放入此文件中以覆盖默认设置</div><div class="line">&#123;</div><div class="line">    <span class="attr">"files.associations"</span>: &#123;</div><div class="line">        <span class="attr">"*.tpl"</span>: <span class="string">"html"</span>,</div><div class="line">        <span class="attr">"*.js"</span>: <span class="string">"javascript"</span>,</div><div class="line">        <span class="attr">"*.cshtml"</span>: <span class="string">"html"</span>,</div><div class="line">        <span class="attr">"*.css"</span>: <span class="string">"css"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"TodoParser"</span>: &#123;</div><div class="line">        <span class="attr">"exclude"</span>: [],</div><div class="line">        <span class="attr">"include"</span>: [</div><div class="line">            <span class="string">"js"</span>,</div><div class="line">            <span class="string">"cshtml"</span>,</div><div class="line">            <span class="string">"cs"</span>,</div><div class="line">            <span class="string">"go"</span>,</div><div class="line">            <span class="string">"css"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"folderExclude"</span>: [</div><div class="line">            <span class="string">"node_modules"</span>,</div><div class="line">            <span class="string">".vscode"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"markers"</span>: [</div><div class="line">            <span class="string">"NOTE:"</span>,</div><div class="line">            <span class="string">"REMINDER:"</span></div><div class="line">        ],</div><div class="line">        <span class="attr">"autoDefaultMarkers"</span>: <span class="literal">true</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"files.autoSave"</span>: <span class="string">"off"</span>,</div><div class="line">    <span class="attr">"editor.cursorStyle"</span>: <span class="string">"underline"</span>,</div><div class="line">    <span class="attr">"editor.cursorBlinking"</span>: <span class="string">"solid"</span>,</div><div class="line">    //------------vimconfig------------</div><div class="line">    "vim.easymotion": true,</div><div class="line">    "vim.incsearch": true,</div><div class="line">    "vim.useSystemClipboard": false,</div><div class="line">    "vim.useCtrlKeys": true,</div><div class="line">    "vim.hlsearch": true,</div><div class="line">    "vim.insertModeKeyBindings": [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"before"</span>: [</div><div class="line">                <span class="string">"j"</span>,</div><div class="line">                <span class="string">"j"</span></div><div class="line">            ],</div><div class="line">            <span class="attr">"after"</span>: [</div><div class="line">                <span class="string">"&lt;Esc&gt;"</span></div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    "vim.otherModesKeyBindingsNonRecursive": [</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"before"</span>: [</div><div class="line">                <span class="string">"&lt;leader&gt;"</span>,</div><div class="line">                <span class="string">"d"</span></div><div class="line">            ],</div><div class="line">            <span class="attr">"after"</span>: [</div><div class="line">                <span class="string">"d"</span>,</div><div class="line">                <span class="string">"d"</span></div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"before"</span>: [</div><div class="line">                <span class="string">"g"</span>,</div><div class="line">                <span class="string">"D"</span></div><div class="line">            ],</div><div class="line">            <span class="attr">"after"</span>: [],</div><div class="line">            <span class="attr">"commands"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"command"</span>: <span class="string">"editor.action.referenceSearch.trigger"</span>,</div><div class="line">                    <span class="attr">"args"</span>: []</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"before"</span>: [</div><div class="line">                <span class="string">"&lt;C-o&gt;"</span></div><div class="line">            ],</div><div class="line">            <span class="attr">"after"</span>: [],</div><div class="line">            <span class="attr">"commands"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"command"</span>: <span class="string">"workbench.action.navigateBack"</span>,</div><div class="line">                    <span class="attr">"args"</span>: []</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        &#123;</div><div class="line">            <span class="attr">"before"</span>: [</div><div class="line">                <span class="string">"&lt;C-i&gt;"</span></div><div class="line">            ],</div><div class="line">            <span class="attr">"after"</span>: [],</div><div class="line">            <span class="attr">"commands"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"command"</span>: <span class="string">"workbench.action.navigateForward"</span>,</div><div class="line">                    <span class="attr">"args"</span>: []</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">    ],</div><div class="line">    "vim.enableNeovim": false,</div><div class="line">    "editor.wordWrap": "on",</div><div class="line">    "workbench.colorTheme": "One Dark Pro",</div><div class="line">    "workbench.iconTheme": "vs-seti",</div><div class="line">    "python.pythonPath": "/usr/local/bin/python3",</div><div class="line">    "vim.disableAnnoyingNeovimMessage": true,</div><div class="line">    "window.zoomLevel": 0,</div><div class="line">    "python.formatting.formatOnSave": true,</div><div class="line">    "python.linting.flake8Enabled": true,</div><div class="line">    "python.formatting.provider": "yapf"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">// 将设置放入此文件中以覆盖默认设置</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"files.associations"</span>: &#123;</span><br><span class="line">        <span class="attr">"*.tpl"</span>: <span class="string">"html"</span>,</span><br><span class="line">        <span class="attr">"*.js"</span>: <span class="string">"javascript"</span>,</span><br><span class="line">        <span class="attr">"*.cshtml"</span>: <span class="string">"html"</span>,</span><br><span class="line">        <span class="attr">"*.css"</span>: <span class="string">"css"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"TodoParser"</span>: &#123;</span><br><span class="line">        <span class="attr">"exclude"</span>: [],</span><br><span class="line">        <span class="attr">"include"</span>: [</span><br><span class="line">            <span class="string">"js"</span>,</span><br><span class="line">            <span class="string">"cshtml"</span>,</span><br><span class="line">            <span class="string">"cs"</span>,</span><br><span class="line">            <span class="string">"go"</span>,</span><br><span class="line">            <span class="string">"css"</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"folderExclude"</span>: [</span><br><span class="line">            <span class="string">"node_modules"</span>,</span><br><span class="line">            <span class="string">".vscode"</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"markers"</span>: [</span><br><span class="line">            <span class="string">"NOTE:"</span>,</span><br><span class="line">            <span class="string">"REMINDER:"</span></span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">"autoDefaultMarkers"</span>: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"files.autoSave"</span>: <span class="string">"off"</span>,</span><br><span class="line">    <span class="attr">"editor.cursorStyle"</span>: <span class="string">"underline"</span>,</span><br><span class="line">    <span class="attr">"editor.cursorBlinking"</span>: <span class="string">"solid"</span>,</span><br><span class="line">    //------------vimconfig------------</span><br><span class="line">    "vim.easymotion": true,</span><br><span class="line">    "vim.incsearch": true,</span><br><span class="line">    "vim.useSystemClipboard": false,</span><br><span class="line">    "vim.useCtrlKeys": true,</span><br><span class="line">    "vim.hlsearch": true,</span><br><span class="line">    "vim.insertModeKeyBindings": [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"before"</span>: [</span><br><span class="line">                <span class="string">"j"</span>,</span><br><span class="line">                <span class="string">"j"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"after"</span>: [</span><br><span class="line">                <span class="string">"&lt;Esc&gt;"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    "vim.otherModesKeyBindingsNonRecursive": [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"before"</span>: [</span><br><span class="line">                <span class="string">"&lt;leader&gt;"</span>,</span><br><span class="line">                <span class="string">"d"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"after"</span>: [</span><br><span class="line">                <span class="string">"d"</span>,</span><br><span class="line">                <span class="string">"d"</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"before"</span>: [</span><br><span class="line">                <span class="string">"g"</span>,</span><br><span class="line">                <span class="string">"D"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"after"</span>: [],</span><br><span class="line">            <span class="attr">"commands"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"command"</span>: <span class="string">"editor.action.referenceSearch.trigger"</span>,</span><br><span class="line">                    <span class="attr">"args"</span>: []</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"before"</span>: [</span><br><span class="line">                <span class="string">"&lt;C-o&gt;"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"after"</span>: [],</span><br><span class="line">            <span class="attr">"commands"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"command"</span>: <span class="string">"workbench.action.navigateBack"</span>,</span><br><span class="line">                    <span class="attr">"args"</span>: []</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"before"</span>: [</span><br><span class="line">                <span class="string">"&lt;C-i&gt;"</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">"after"</span>: [],</span><br><span class="line">            <span class="attr">"commands"</span>: [</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="attr">"command"</span>: <span class="string">"workbench.action.navigateForward"</span>,</span><br><span class="line">                    <span class="attr">"args"</span>: []</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    "vim.enableNeovim": false,</span><br><span class="line">    "editor.wordWrap": "on",</span><br><span class="line">    "workbench.colorTheme": "One Dark Pro",</span><br><span class="line">    "workbench.iconTheme": "vs-seti",</span><br><span class="line">    "python.pythonPath": "/usr/local/bin/python3",</span><br><span class="line">    "vim.disableAnnoyingNeovimMessage": true,</span><br><span class="line">    "window.zoomLevel": 0,</span><br><span class="line">    "python.formatting.formatOnSave": true,</span><br><span class="line">    "python.linting.flake8Enabled": true,</span><br><span class="line">    "python.formatting.provider": "yapf"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="宏篇"><a href="#宏篇" class="headerlink" title="宏篇"></a>宏篇</h2><h3 id="vim的宏持久化"><a href="#vim的宏持久化" class="headerlink" title="vim的宏持久化"></a>vim的宏持久化</h3><p>vim的宏是很强大的机制，原生的vim是将按键保存到寄存器中，然后多次运行寄存器中的命令实现多次运行宏的机制</p>
 <p>我现在遇到一种情况，就是主要的几种宏，我会多次的想要使用，而每次使用都需要手工编写一遍，如果能把宏记录下来，或者发送给别人运行，是不是一种不错的想法呢？</p>
 <p>说明一下主要的步骤</p>
@@ -597,9 +719,9 @@
 </ol>
 <h2 id="Appveyor是什么"><a href="#Appveyor是什么" class="headerlink" title="Appveyor是什么"></a>Appveyor是什么</h2><p>Appveyor是一个CI Service，后面我就不详细解释了。请原凉我的懒惰，不了解这个你也不会看到这里了。</p>
 <h2 id="干货"><a href="#干货" class="headerlink" title="干货"></a>干货</h2><ul>
-<li>在<a href="https://github.com/" target="_blank" rel="external">Github</a>建立博客仓库，这个仓库就是通过Hexo搭建的博客的内容</li>
-<li>在Appveyor<a href="https://ci.appveyor.com/signup" target="_blank" rel="external">注册</a></li>
-<li>将Github<a href="https://ci.appveyor.com/projects/new" target="_blank" rel="external">绑定</a>到Appveyor上，这步操作，将建立一个Project<ul>
+<li>在<a href="https://github.com/" target="_blank" rel="noopener">Github</a>建立博客仓库，这个仓库就是通过Hexo搭建的博客的内容</li>
+<li>在Appveyor<a href="https://ci.appveyor.com/signup" target="_blank" rel="noopener">注册</a></li>
+<li>将Github<a href="https://ci.appveyor.com/projects/new" target="_blank" rel="noopener">绑定</a>到Appveyor上，这步操作，将建立一个Project<ul>
 <li>在Project的setting选项中的General中，找到<code>Webhook URL</code>项目，记录下这个钩子的路径，待会儿需要在github的设置中需要使用</li>
 <li>在Project的setting选项中的Environment上设置下图的四个变量(<code>GIT_USER_EMAIL</code>，<code>GIT_USER_NAME</code>，<code>STATIC_SITE_REPO</code>，<code>TARGET_BRANCH</code>)，这四个变量的意思如果不懂可以用翻译软件，照抄(如果修改则要修改后续我这里提供的yml的编码)，需要详细说明的是<code>STATIC_SITE_REPO</code>这个值是用于做博客的仓库，也可以是源码的那个仓库，只需要把BRANCH区分开就可以了。</li>
 </ul>
@@ -608,17 +730,17 @@
 <p><img src="http://or8fufrdd.bkt.clouddn.com/20170911230240_l4XndR_Screenshot.jpeg" alt="环境设置"></p>
 <ul>
 <li>在Github的源码仓库配置CI钩子，即上方记录下的钩子，具体目录在Setting - Webhooks 中拷贝进去即可</li>
-<li><p>请下载这个<a href="http://or8fufrdd.bkt.clouddn.com/appveyor.yml" target="_blank" rel="external">配置文件</a>，打开并修改其中的<code>secure</code>配置项，这里的值是你Github的token，需要在<a href="https://github.com/settings/tokens" target="_blank" rel="external">这里</a>生成，这份文件生成完毕之后，拷贝到自己的Hexo项目根目录中，就是和_config.yml同级的目录</p>
+<li><p>请下载这个<a href="http://or8fufrdd.bkt.clouddn.com/appveyor.yml" target="_blank" rel="noopener">配置文件</a>，打开并修改其中的<code>secure</code>配置项，这里的值是你Github的token，需要在<a href="https://github.com/settings/tokens" target="_blank" rel="noopener">这里</a>生成，这份文件生成完毕之后，拷贝到自己的Hexo项目根目录中，就是和_config.yml同级的目录</p>
 </li>
 <li><p>通过命令行或者SourceTree或者其他Git工具push你的源文件代码，这时你就可以登录Appveyor看到构建过程，当然你也可以自行增加Hexo插件，修改Appveyor.yml的代码自行增减NPM包</p>
 </li>
 </ul>
 <h2 id="给我一首歌的时间"><a href="#给我一首歌的时间" class="headerlink" title="给我一首歌的时间"></a>给我一首歌的时间</h2><div class="aplayer" data-id="185821" data-server="netease" data-type="song"></div>
 
-<p>++代码是这样的++<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"aplayer"</span> data-id=<span class="string">"185821"</span> data-server=<span class="string">"netease"</span> data-type=<span class="string">"song"</span>&gt;&lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>这是我加的一个音乐的插件，出于尊敬给出源博客的<a href="https://www.tiexo.cn/aplayer/" target="_blank" rel="external">地址</a>，下载<a href="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js" target="_blank" rel="external">Aplay.js</a>和<a href="https://api.i-meto.com/music/player.js" target="_blank" rel="external">Player.js</a>，放的具体位置和用的主题有关，像我的NexT主题是放在layout的<code>_script</code>下的<code>vendor.swig</code>的最后，形式如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/myblog/js/src/APlayer.min.js"</span>&gt;&lt;/script&gt;</div><div class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/myblog/js/src/player.js"</span>&gt;&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>++代码是这样的++<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"aplayer"</span> data-id=<span class="string">"185821"</span> data-server=<span class="string">"netease"</span> data-type=<span class="string">"song"</span>&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这是我加的一个音乐的插件，出于尊敬给出源博客的<a href="https://www.tiexo.cn/aplayer/" target="_blank" rel="noopener">地址</a>，下载<a href="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js" target="_blank" rel="noopener">Aplay.js</a>和<a href="https://api.i-meto.com/music/player.js" target="_blank" rel="noopener">Player.js</a>，放的具体位置和用的主题有关，像我的NexT主题是放在layout的<code>_script</code>下的<code>vendor.swig</code>的最后，形式如下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/myblog/js/src/APlayer.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/myblog/js/src/player.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
 <p>具体情况各有不同，这个就要靠自己了</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>再推一波<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="external">小书匠</a>，虽然因为更新4.0，他把我所有的草稿全冲没了…但是好东西仍然值得推广。好用的markdown编辑器很多，我用下来这个是功能最齐全的。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>再推一波<a href="http://soft.xiaoshujiang.com/" target="_blank" rel="noopener">小书匠</a>，虽然因为更新4.0，他把我所有的草稿全冲没了…但是好东西仍然值得推广。好用的markdown编辑器很多，我用下来这个是功能最齐全的。</p>
 
           
         
@@ -745,11 +867,11 @@
 <li>如果需要自动化发布，我们还需要一个AppVeyor帐号，这是一个可选项，每次发布文章自己部署也是没问题的，因为Hexo的插件已经支持一键发布，我使用AppVeyor是为了和我的markdown编辑器集成，不需要自己敲命令进行发布。</li>
 <li>本地软件环境<ul>
 <li>安装npm<ul>
-<li><a href="http://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-npm.html</a></li>
+<li><a href="http://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="noopener">http://www.runoob.com/nodejs/nodejs-npm.html</a></li>
 </ul>
 </li>
 <li>安装git<ul>
-<li><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="external">https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git</a></li>
+<li><a href="https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git</a></li>
 </ul>
 </li>
 <li>安装Hexo<ul>
@@ -775,7 +897,7 @@
 </ol>
 <p>至此，博客就算是搭建完了，如果要发布内容，只需要写好markdown文件，放入source文件夹下的_posts文件夹下，然后在shell中进入myblog目录，键入<code>hexo deploy</code>，博客就会发布到github上了。</p>
 <hr>
-<h3 id="自动化部署-这是一片新的世界"><a href="#自动化部署-这是一片新的世界" class="headerlink" title="自动化部署 这是一片新的世界"></a>自动化部署 这是一片新的世界</h3><p>参考这篇<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/" target="_blank" rel="external">文章</a>吧，写的很详细，连脚本都帮你写好了</p>
+<h3 id="自动化部署-这是一片新的世界"><a href="#自动化部署-这是一片新的世界" class="headerlink" title="自动化部署 这是一片新的世界"></a>自动化部署 这是一片新的世界</h3><p>参考这篇<a href="https://formulahendry.github.io/2016/12/04/hexo-ci/" target="_blank" rel="noopener">文章</a>吧，写的很详细，连脚本都帮你写好了</p>
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><h3 id="关于markdown编辑器"><a href="#关于markdown编辑器" class="headerlink" title="关于markdown编辑器"></a>关于markdown编辑器</h3><p>我用的是小书匠，这个软件的名字比较俗，但以我的使用情况，这个软件功能和平台兼容拥有足够的亮点让人愿意去尝试，例如VIM、MERMAID、和不少的第三方数据的绑定功能等
 　</p>
 
@@ -987,7 +1109,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/myblog/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1000,7 +1122,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/myblog/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
